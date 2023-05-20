@@ -1,0 +1,122 @@
+.page {
+  flex: 1 1 auto;
+}
+// --------------------------
+.main-block {
+  position: relative;  // .main-block__container {}
+
+  &__body {
+    padding: 184px 0 191px;
+    position: relative;
+    z-index: 2; //!!!!!!!!!!!!!!!
+    max-width: 400px;
+
+    & > *:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 137.931034%; /* 80/58 */
+    letter-spacing: 0.2px;
+  }
+
+  &__text {
+    color: $txt-secondary; 
+    font-size: 20px;
+    line-height: 150%; /* 30/20 */
+  }
+
+  &__buttons {
+    display: flex; //inline-flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
+    // gap: 10px; //shu
+  }
+
+  &__button {
+    border-radius: 37px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2px;
+    text-align: center; //~
+    font-weight: 700;
+    line-height: 150%; /* 21/14 */
+    padding: 5px 36px; //5 - p deffense
+    margin: 10px 0;
+    transition: color 0.3s, background-color 0.3s;
+
+    // &:not(:last-child) {    margin-right: 10px;  } //fL
+
+    &_orange {
+      background-color: $orange; 
+      color: $white;
+
+      &:hover {
+        background-color: $white; 
+        color: $orange;
+      }
+    }
+
+    &_border {
+      color: $green;
+      border: 1px solid $green;
+
+      &:hover {
+        background-color: $green; 
+        color: $white;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; //?? _ibg
+  }
+}
+// ---------------- ...479]
+@media (max-width: 479px) {
+  .main-block__body {
+    padding: 115px 0 160px;
+  }
+
+  .main-block__title {
+    font-size: 42px;
+  }
+
+  .main-block__button {
+    flex: 1 1 100%;
+  }
+
+  .main-block__text {
+    color: #585757; 
+  }
+}
+// -------------------------- [480... fl:479
+@media (min-width: 480px) {
+  .main-block__button:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+// ----------------- ...992]
+@media (max-width: 992px) {
+  .main-block__body {
+    padding-top: 120px; // padding: 120px 0 191px;
+  }
+  .main-block__image {
+    opacity: 0.5;
+  }
+}
+// -------------------- ...1300]
+@media (max-width: 1300px) {
+  .main-block__image img {
+    object-position: right;
+  }
+}

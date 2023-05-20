@@ -1,0 +1,56 @@
+// .page__contact {}
+// --------------------------------------------------------------------------------
+.contact {
+  background-color: $white; 
+  padding: 42px 0;
+
+  &__content {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    font-size: 24px;
+    line-height: 133.333333%; /* 32/24 */
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    color: $txt-secondary;
+    line-height: 142.857143%; /* 20/14 */
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $orange; 
+    color: $white;
+    border-radius: 5px;
+    min-height: 58px;
+    padding: 5px 40px;
+
+    &:hover {
+      background-color: darken($orange, 10%);
+    }
+  }
+}
+// ------------------  ... - 768]
+@media (min-width: 767px) {
+  .contact {
+    &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__content {
+      padding-right: 20px;
+    }
+  }
+}

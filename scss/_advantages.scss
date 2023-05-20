@@ -1,0 +1,77 @@
+// .page__advantages {}
+// --------------------
+.advantages {
+  padding: 80px 0;
+
+  &__header {
+    margin-bottom: 50px;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+  }
+
+  &__column {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    flex: 0 1 25%;
+  }
+
+  &__item {
+    background-color: $white;
+    padding: 30px;
+    font-weight: 700;
+    text-align: center;
+
+    & > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    svg {
+      width: 49px;
+      height: 48px;
+      fill: $green;
+    }
+  }
+
+  &__value {
+    font-size: 40px;
+    line-height: 142.5%; /* 57/40 */
+  }
+
+  &__text {
+    color: $txt-secondary;
+    font-size: 16px;
+    line-height: 150%; /* 24/16 */
+  }
+}
+// -------------------- ...992]
+@media (max-width: 992px) {
+  .advantages {
+    padding: 50px 0;
+  }
+}
+// -------------------- ...767]
+@media (max-width: 767px) {
+  .advantages {
+    padding: 30px 0;
+
+    &.advantages__header {
+      padding-bottom: 25px;
+    }
+  }
+}
+// -------------------- ...1023] fL 1020
+@media (max-width: 1023px) {
+  .advantages__column {
+    flex: 1 1 50%;
+  }
+}
+// -------------------- ...560] !importan after bPoint 1023 ???????
+@media (max-width: 560px) {
+  .advantages__column {
+    flex: 0 1 100%;
+  }
+}
